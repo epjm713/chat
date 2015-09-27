@@ -1,6 +1,6 @@
 //	Customization
 
-var appPort = 7777;
+var appPort = 8080;
 
 // Librairies
 
@@ -27,7 +27,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', function(req, res){
   res.render('home.jade');
 });
-server.listen(appPort,"192.168.1.35");
+server.listen(appPort);
 // app.listen(appPort);
 console.log("Server listening on port " + appPort);
 
