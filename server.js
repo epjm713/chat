@@ -1,6 +1,6 @@
 //	Customization
 
-var appPort = 8080;
+var appPort = process.env.PORT;
 
 // Librairies
 
@@ -27,7 +27,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', function(req, res){
   res.render('home.jade');
 });
-server.listen(process.env.PORT || 5000)
+server.listen(appPort)
 // app.listen(appPort);
 console.log("Server listening on port " + appPort);
 
